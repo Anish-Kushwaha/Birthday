@@ -54,5 +54,5 @@ Stay tuned!
 ---
 
 ## Copyright Holder 
-** ~ Anish Kushwaha**  
+**Anish Kushwaha**  
 ⚚Ⓐ⚚
