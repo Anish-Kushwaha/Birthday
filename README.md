@@ -10,12 +10,12 @@ This repo will continue to grow as new birthday pages are added.
 
 ## 🎂 Current Birthday Pages
 
-### 1️⃣ **Niraj Bhai — Birthday Neon Special**
+### 1️⃣ **Niraj Bhai — Birthday Special**
 **Live Page:**  
 👉 https://anish-kushwaha.github.io/Birthday
 
 #### 👤 About Niraj Bhai
-Niraj Yadav, popularly known as **Niraj Bhai**, is one of the most energetic, loyal, and powerful personalities in Nai Bazar, Buxar (Bihar).  
+Niraj Yadav, popularly known as **Niraj Bhai**, is one of the most energetic and powerful Gangester in Nai Bazar, Buxar (Bihar).  
 His presence is bold, his attitude strong, and his friendship priceless.  
 This webpage is a neon-style, animated birthday dedication filled with:
 
@@ -53,6 +53,6 @@ Stay tuned!
 
 ---
 
-## 👤 Author
-**Anish Kushwaha**  
+## Copyright Holder 
+** ~ Anish Kushwaha**  
 ⚚Ⓐ⚚
