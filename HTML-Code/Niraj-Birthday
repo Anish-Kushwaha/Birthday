@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉  Happy Birthday Niraj Bhai  🔥</title>
+
+<style>
+/* GLOBAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* NEON BACKGROUND */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #ff00ff, #7b00ff, #0011ff, #00e5ff);
+  background-size: 200% 200%;
+  animation: neonBG 6s infinite alternate;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes neonBG {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
+  width: 100%;
+  max-width: 900px;
+  padding: 22px;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #ff00ff, #ff9900, #00ffff);
+  background-size: 300%;
+  animation: neonBG 4s infinite alternate;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 0 20px white;
+}
+
+h1 {
+  font-size: 28px;
+  background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonText 3s infinite alternate;
+}
+
+@keyframes neonText {
+  0% { filter: drop-shadow(0 0 8px cyan); }
+  100% { filter: drop-shadow(0 0 12px magenta); }
+}
+
+.subtext {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* BANNER */
+.banner {
+  margin-top: 18px;
+  background: rgba(0,0,0,0.35);
+  padding: 20px;
+  border-radius: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(255,255,255,0.25);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.banner h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffdaff;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+.banner p {
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* SOCIALS */
+.socials a {
+  display: inline-block;
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  margin-right: 10px;
+  box-shadow: 0 0 12px cyan;
+}
+
+/* CAKE */
+.cake {
+  font-size: 80px;
+  text-shadow: 0 0 18px #ff00ff;
+}
+
+/* MESSAGE */
+.msg-box {
+  margin-top: 20px;
+  padding: 18px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.msg-text {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  padding: 18px 10px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: 0 0 18px rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  margin-bottom: 90px;
+}
+
+.footer p { margin: 6px 0; }
+
+.footer-quote {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffb3ff;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+.footer-copy {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-symbol {
+  font-size: 18px;
+  font-weight: 900;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* MUSIC BAR */
+.music-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -4px 25px rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+.music-title {
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 8px black;
+}
+
+.music-bar button {
+  background: black;
+  color: cyan;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 900;
+  border: 2px solid cyan;
+  box-shadow: 0 0 12px cyan;
+}
+
+/* CONFETTI */
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* BALLOONS */
+.balloon {
+  position: absolute;
+  bottom: -120px;
+  width: 45px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.85;
+  animation: floatUp linear infinite;
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-130vh); }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="confetti"></canvas>
+
+<div class="card">
+
+<header>
+  <div class="avatar">NY</div>
+  <div>
+    <h1>🎉 Happy Birthday Niraj Bhai </h1>
+    <div class="subtext">Aaj ke din ek sher payda huwaa thaa Sher !</div>
+  </div>
+</header>
+
+<div class="banner">
+  <div style="flex:1">
+
+    <h2> निराज भैया के लिए 🎂 </h2>
+
+<p>
+ना दौलत में, ना शोहरत में,
+ना किसी बड़े नाम में रवानी है…
+मेरे भाई निराज की यारी ही,
+मेरी असली कहानी है।
+
+जन्मदिन मुबारक हो मेरे भाई,
+खुदा हर ख़ुशी तुम्हें आसानी से दे,
+जहाँ कदम रखो वहाँ इज्ज़त मिले,
+और हर सपना तुम्हारा सच हो के रहे।
+
+रब से इतनी दुआ है,
+हर सुबह मुस्कुराहट दे,
+जो तुम्हारे दिल में है,
+वो खुदा तुम्हारे नसीब में लिखे।
+
+तेरी दोस्ती से रोशन है मेरी ज़िन्दगी,
+वरना हम भी क्या चीज़ थे…
+आज तेरे जन्मदिन पर बस इतना ही —
+तू खुश रहे मेरे भाई, और बाकी सब भाड़ में जाए! 😄🔥
+</p>
+
+<h2>Aaj ke din eish matabli duniya me ek sher me kadam rakha thaa !! 🔥 </h2>
+
+<p>
+May your life glow brighter than neon lights and shine stronger than all colours in this world!
+Your energy, vibe and presence make every room brighter.  
+Enjoy your special day, Bhai! 🔥
+</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/neeraj_buxar_king720" target="_blank">📸 Instagram</a>
+      <a href="https://www.facebook.com/share/185gBvePM9/" target="_blank">👍 Facebook</a>
+    </div>
+
+  </div>
+
+  <div class="cake">🎂</div>
+</div>
+
+<div class="msg-box">
+  <h3>💌 A Personal Message</h3>
+  <div class="msg-text">
+Happy Birthday Niraj Bhai! 🎉💖  
+You deserve every colour of happiness today.  
+Stay glowing, stay strong, stay unstoppable.  
+We are always proud of you!
+  </div>
+
+  <h3>Bhai, bahut kuchh sikhaiila hamara ke aur abhi bahut kuchh shikhe ke bhi baa...</h3>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-quote">“Aab, Anshu waa ke yaad maat kara, bhula jaa !!!”</p>
+  <p class="footer-copy">© 2025 Anish Kushwaha.</p>
+  <p class="footer-symbol">⚚Ⓐ⚚</p>
+</footer>
+
+</div>
+
+<!-- AUDIO PLAYER -->
+<audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+
+<div class="music-bar">
+  <div class="music-title">🎵 Emotional Beat</div>
+  <button id="playBtn">PLAY ▶</button>
+</div>
+
+<script>
+/* Music Controls */
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = "PAUSE ⏸";
+  } else {
+    audio.pause();
+    playBtn.textContent = "PLAY ▶";
+  }
+});
+
+/* Confetti */
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+const confetti = [];
+const colors = ["#ff00ff","#00ffff","#ffff00","#ff6bcb","#7b5cff"];
+
+function spawnConfetti() {
+  for (let i=0;i<90;i++){
+    confetti.push({
+      x: Math.random()*innerWidth,
+      y: Math.random()*innerHeight - innerHeight,
+      w: 7, h: 10,
+      vy: Math.random()*3 + 2,
+      vx: Math.random()*1 - 0.5,
+      color: colors[Math.floor(Math.random()*colors.length)]
+    });
+  }
+}
+spawnConfetti();
+
+function animate() {
+  ctx.clearRect(0,0,innerWidth,innerHeight);
+  confetti.forEach((p,i)=>{
+    p.x += p.vx;
+    p.y += p.vy;
+    ctx.fillStyle = p.color;
+    ctx.fillRect(p.x,p.y,p.w,p.h);
+    if (p.y > innerHeight) {
+      confetti.splice(i,1);
+      confetti.push({
+        x: Math.random()*innerWidth,
+        y: -20,
+        w: 7, h: 10,
+        vy: Math.random()*3 + 2,
+        vx: Math.random()*1 - 0.5,
+        color: colors[Math.floor(Math.random()*colors.length)]
+      });
+    }
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+/* Balloons */
+const balloonColors = ["#ff00ff","#00ffff","#ff6bcb","#ffff00"];
+for (let i=0;i<10;i++){
+  const b = document.createElement("div");
+  b.classList.add("balloon");
+  b.style.left = Math.random()*100 + "%";
+  b.style.background = balloonColors[Math.floor(Math.random()*balloonColors.length)];
+  b.style.animationDuration = (7 + Math.random()*6) + "s";
+  document.body.appendChild(b);
+}
+</script>
+
+</body>
+  </html>
