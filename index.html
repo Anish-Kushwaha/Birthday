@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎉  Happy Birthday Niraj Bhai  🔥</title>
+<title>🎉  Happy Birthday Saksham 🔥</title>
 
 <style>
 /* GLOBAL RESET */
@@ -243,25 +243,25 @@ h1 {
 <div class="card">
 
 <header>
-  <div class="avatar">NY</div>
+  <div class="avatar">SD</div>
   <div>
-    <h1>🎉 Happy Birthday Niraj Bhai </h1>
-    <div class="subtext">Aaj ke din ek sher payda huwaa thaa Sher !</div>
+    <h1>🎉 Happy Birthday Saksham Dost </h1>
+    <div class="subtext">Aaj ke din ek sher payda huwaa thaa Sher Dost!</div>
   </div>
 </header>
 
 <div class="banner">
   <div style="flex:1">
 
-    <h2> निराज भैया के लिए 🎂 </h2>
+    <h2> सक्षम् के लिए 🎂 </h2>
 
 <p>
 ना दौलत में, ना शोहरत में,
 ना किसी बड़े नाम में रवानी है…
-मेरे भाई निराज की यारी ही,
+मेरे दोस्त सक्षम् की यारी ही,
 मेरी असली कहानी है।
 
-जन्मदिन मुबारक हो मेरे भाई,
+जन्मदिन मुबारक हो मेरे दोस्त,
 खुदा हर ख़ुशी तुम्हें आसानी से दे,
 जहाँ कदम रखो वहाँ इज्ज़त मिले,
 और हर सपना तुम्हारा सच हो के रहे।
@@ -274,21 +274,16 @@ h1 {
 तेरी दोस्ती से रोशन है मेरी ज़िन्दगी,
 वरना हम भी क्या चीज़ थे…
 आज तेरे जन्मदिन पर बस इतना ही —
-तू खुश रहे मेरे भाई, और बाकी सब भाड़ में जाए! 😄🔥
+तू खुश रहे मेरे दोस्त, और बाकी सब भाड़ में जाए! 😄🔥
 </p>
 
-<h2>Aaj ke din eish matabli duniya me ek sher me kadam rakha thaa !! 🔥 </h2>
+<h2>Aaj ke din eish matabli duniya me ek sher ne kadam rakha thaa !! 🔥</h2>
 
 <p>
 May your life glow brighter than neon lights and shine stronger than all colours in this world!
 Your energy, vibe and presence make every room brighter.  
-Enjoy your special day, Bhai! 🔥
+Enjoy your special day, Dost! 🔥
 </p>
-
-    <div class="socials">
-      <a href="https://www.instagram.com/neeraj_buxar_king720" target="_blank">📸 Instagram</a>
-      <a href="https://www.facebook.com/share/185gBvePM9/" target="_blank">👍 Facebook</a>
-    </div>
 
   </div>
 
@@ -298,25 +293,21 @@ Enjoy your special day, Bhai! 🔥
 <div class="msg-box">
   <h3>💌 A Personal Message</h3>
   <div class="msg-text">
-Happy Birthday Niraj Bhai! 🎉💖  
+Happy Birthday Saksham bro 🎉💖  
 You deserve every colour of happiness today.  
 Stay glowing, stay strong, stay unstoppable.  
 We are always proud of you!
   </div>
-
-  <h3>Bhai, bahut kuchh sikhaiila hamara ke aur abhi bahut kuchh shikhe ke bhi baa...</h3>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <p class="footer-quote">“Aab, Anshu waa ke yaad maat kara, bhula jaa !!!”</p>
-  <p class="footer-copy">© 2025 Anish Kushwaha.</p>
+  <p class="footer-quote">"Bhai party baki baa 🙂!!!”</p>
+  <p class="footer-copy">© 2025 Anish Kushwaha. All rights reserved. </p>
   <p class="footer-symbol">⚚Ⓐ⚚</p>
 </footer>
 
 </div>
 
-<!-- AUDIO PLAYER -->
 <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
 
 <div class="music-bar">
@@ -325,7 +316,6 @@ We are always proud of you!
 </div>
 
 <script>
-/* Music Controls */
 const audio = document.getElementById("audio");
 const playBtn = document.getElementById("playBtn");
 
@@ -339,7 +329,6 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-/* Confetti */
 const canvas = document.getElementById("confetti");
 const ctx = canvas.getContext("2d");
 canvas.width = innerWidth;
@@ -348,48 +337,34 @@ canvas.height = innerHeight;
 const confetti = [];
 const colors = ["#ff00ff","#00ffff","#ffff00","#ff6bcb","#7b5cff"];
 
-function spawnConfetti() {
-  for (let i=0;i<90;i++){
-    confetti.push({
-      x: Math.random()*innerWidth,
-      y: Math.random()*innerHeight - innerHeight,
-      w: 7, h: 10,
-      vy: Math.random()*3 + 2,
-      vx: Math.random()*1 - 0.5,
-      color: colors[Math.floor(Math.random()*colors.length)]
-    });
-  }
+for (let i=0;i<90;i++){
+  confetti.push({
+    x: Math.random()*innerWidth,
+    y: Math.random()*innerHeight - innerHeight,
+    w: 7, h: 10,
+    vy: Math.random()*3 + 2,
+    vx: Math.random()*1 - 0.5,
+    color: colors[Math.floor(Math.random()*colors.length)]
+  });
 }
-spawnConfetti();
 
 function animate() {
   ctx.clearRect(0,0,innerWidth,innerHeight);
-  confetti.forEach((p,i)=>{
+  confetti.forEach(p=>{
     p.x += p.vx;
     p.y += p.vy;
     ctx.fillStyle = p.color;
     ctx.fillRect(p.x,p.y,p.w,p.h);
-    if (p.y > innerHeight) {
-      confetti.splice(i,1);
-      confetti.push({
-        x: Math.random()*innerWidth,
-        y: -20,
-        w: 7, h: 10,
-        vy: Math.random()*3 + 2,
-        vx: Math.random()*1 - 0.5,
-        color: colors[Math.floor(Math.random()*colors.length)]
-      });
-    }
+    if (p.y > innerHeight) p.y = -20;
   });
   requestAnimationFrame(animate);
 }
 animate();
 
-/* Balloons */
 const balloonColors = ["#ff00ff","#00ffff","#ff6bcb","#ffff00"];
 for (let i=0;i<10;i++){
   const b = document.createElement("div");
-  b.classList.add("balloon");
+  b.className = "balloon";
   b.style.left = Math.random()*100 + "%";
   b.style.background = balloonColors[Math.floor(Math.random()*balloonColors.length)];
   b.style.animationDuration = (7 + Math.random()*6) + "s";
@@ -398,4 +373,4 @@ for (let i=0;i<10;i++){
 </script>
 
 </body>
-  </html>
+</html>
