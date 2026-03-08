@@ -1,295 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎀 Happy 16th Birthday Bharti 🎂</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✨ Happy Birthday Supriya Di .... ✨</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(145deg, #ffd9e8, #fbc4d5, #fdc9e6, #e5c3f0);
+      background-size: 400% 400%;
+      animation: gradientWave 18s ease infinite;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      color: #4a2b3a;
+    }
+    @keyframes gradientWave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-<style>
+    /* floating bg icons */
+    .floating-bg {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 2; overflow: hidden;
+    }
+    .float-icon {
+      position: absolute; color: rgba(255, 230, 250, 0.6); font-size: 1.8rem;
+      animation: floatAround 16s infinite ease-in-out;
+      text-shadow: 0 0 8px #ffb7c5; will-change: transform;
+    }
+    @keyframes floatAround {
+      0% { transform: translate(0,0) rotate(0deg) scale(1); }
+      25% { transform: translate(30px,-20px) rotate(8deg) scale(1.1); }
+      50% { transform: translate(10px,-45px) rotate(0deg) scale(0.95); }
+      75% { transform: translate(-25px,-15px) rotate(-8deg) scale(1.05); }
+      100% { transform: translate(0,0) rotate(0deg) scale(1); }
+    }
 
-/* ================= GLOBAL RESET ================= */
+    /* confetti canvas */
+    #confetti-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 100;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    /* main content */
+    .content {
+      position: relative; z-index: 10; display: flex; flex-direction: column;
+      align-items: center; width: 100%; max-width: 1200px; margin: 0 auto;
+      padding: 0 1rem 2rem;
+    }
 
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#cdb4db,#bde0fe,#ffc8dd);
-background-size:400% 400%;
-animation:bgMove 15s ease infinite;
-min-height:100vh;
-display:flex;
-justify-content:center;
-padding:20px;
-overflow-x:hidden;
-position:relative;
-}
+    /* photo top */
+    .photo-container {
+      width: 100%; line-height: 0; border-bottom: 6px solid #ffb3c6;
+      box-shadow: 0 10px 25px rgba(210,100,150,0.3);
+    }
+    .hero-photo {
+      width: 100%; height: auto; display: block; object-fit: cover;
+      max-height: 70vh; background: #ffe2ed; font-size: 1.2rem;
+    }
 
-@keyframes bgMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
+    /* main card */
+    .birthday-card {
+      background: rgba(255,255,255,0.5); backdrop-filter: blur(8px);
+      border-radius: 60px; margin: 2rem 1rem 1.5rem; padding: 2rem 2rem 2.5rem;
+      box-shadow: 0 20px 35px rgba(190,90,140,0.25), inset 0 0 50px #ffd0e6;
+      border: 2px solid #ffddea; text-align: center; width: 100%;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive; font-size: 4rem; font-weight: 700;
+      color: #ad4672; text-shadow: 4px 4px 0 #ffc1cc; margin-bottom: 0.75rem;
+      animation: softGlow 2.2s infinite alternate;
+    }
+    @keyframes softGlow {
+      0% { text-shadow: 4px 4px 0 #ffb7c5; }
+      100% { text-shadow: 6px 6px 0 #ffa5b8, 0 0 10px #f08; }
+    }
+    .subtitle {
+      font-size: 2.2rem; font-weight: 400; color: #872e5b;
+      background: rgba(255,240,245,0.6); display: inline-block;
+      padding: 0.5rem 2rem; border-radius: 60px; margin-bottom: 1.2rem;
+      font-family: 'Dancing Script', cursive;
+    }
+    .details {
+      font-size: 1.7rem; font-weight: 500; color: #4f2d3e;
+      background: rgba(255,220,235,0.7); padding: 1.2rem 2rem;
+      border-radius: 50px; margin: 1rem 0 2rem; display: flex;
+      flex-wrap: wrap; justify-content: center; gap: 2rem;
+    }
+    .details i { color: #d43f73; margin-right: 0.5rem; font-size: 2rem; animation: hop 1.8s infinite; }
+    @keyframes hop { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-6px); } }
+    .eighteen-badge {
+      font-size: 3.5rem; font-weight: 700; background: linear-gradient(45deg, #fd94b2, #f75d8e);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: spinGlow 4s infinite; filter: drop-shadow(0 0 12px #ff89ae);
+    }
+    @keyframes spinGlow {
+      0% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 5px #ff98bb); }
+      50% { transform: rotate(4deg) scale(1.1); filter: drop-shadow(0 0 18px #ff4f81); }
+      100% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 5px #ff98bb); }
+    }
+    .village-love {
+      font-size: 1.8rem; background: #fff0f5dd; padding: 1rem 2.5rem;
+      border-radius: 80px; margin: 2rem 0 1rem; border: 3px dashed #ffa5c3;
+      backdrop-filter: blur(6px);
+    }
 
-/* ================= FLOATING HEARTS ================= */
+    /* ---- NEW WISH SECTIONS (4 cards) ---- */
+    .wishes-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; width: 100%; margin: 2rem 0 1.5rem;
+    }
+    .wish-card {
+      background: rgba(255, 245, 250, 0.65); backdrop-filter: blur(4px);
+      border-radius: 40px; padding: 1.8rem 1.2rem; text-align: center;
+      border: 2px solid #ffe2f0; box-shadow: 0 12px 25px #f9b8d0;
+      transition: transform 0.2s ease;
+    }
+    .wish-card:hover { transform: scale(1.02); background: rgba(255, 235, 245, 0.8); }
+    .wish-card i {
+      font-size: 2.5rem; color: #d95284; margin-bottom: 0.8rem;
+      animation: sparkleIcon 2s infinite alternate;
+    }
+    @keyframes sparkleIcon {
+      0% { filter: drop-shadow(0 0 2px #ffa5c3); transform: scale(1); }
+      100% { filter: drop-shadow(0 0 12px #ff80a5); transform: scale(1.1); }
+    }
+    .wish-card h3 {
+      font-family: 'Dancing Script', cursive; font-size: 2rem;
+      color: #aa2e62; margin-bottom: 0.6rem; border-bottom: 2px dotted #ffa8c5;
+      display: inline-block; padding-bottom: 0.3rem;
+    }
+    .wish-card p {
+      font-size: 1.2rem; line-height: 1.5; color: #402532;
+      font-weight: 500; padding: 0 0.2rem;
+    }
 
-.heart{
-position:fixed;
-bottom:-20px;
-font-size:18px;
-animation:floatUp linear infinite;
-opacity:0.8;
-pointer-events:none;
-}
+    /* ---------- PROFESSIONAL COMPACT FOOTER ---------- */
+    .footer {
+      width: 100%; margin-top: 2rem;
+      background: rgba(255, 240, 250, 0.75); backdrop-filter: blur(8px);
+      border-top: 3px solid #ffc1d4; border-radius: 40px 40px 0 0;
+      padding: 1.2rem 1.8rem; font-size: 1rem; color: #341f2b;
+      box-shadow: 0 -5px 20px #ffc9dd;
+    }
+    .footer-content {
+      display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+    }
+    .footer-quote {
+      font-family: 'Dancing Script', cursive; font-size: 1.0rem;
+      color: #a13861; font-weight: 600; letter-spacing: 0.5px;
+    }
+    .footer-links {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem 2rem;
+      font-size: 0.8rem; font-weight: 300;
+    }
+    .footer-links a {
+      color: #972b57; text-decoration: none; border-bottom: 2px dotted #ff99bb;
+      transition: 0.2s; font-weight: 600;
+    }
+    .footer-links a:hover { color: #c7256b; border-bottom: 2px solid #ff80a5; }
+    .footer-copyright {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem 1.8rem;
+      font-size: 0.8rem; color: #4d283b; align-items: center;
+    }
+    .symbols {
+      font-size: 1.6rem; letter-spacing: 6px; color: #b34c77;
+      filter: drop-shadow(0 0 4px #ffc0cb);
+    }
+    hr.footer-hr {
+      width: 80px; border: 1px solid #ffb0c3; margin: 0.3rem 0;
+    }
 
-@keyframes floatUp{
-from{transform:translateY(0);}
-to{transform:translateY(-120vh);}
-}
-
-/* ================= MAIN CARD ================= */
-
-.card{
-background:rgba(255,255,255,0.25);
-backdrop-filter:blur(25px);
-border-radius:30px;
-padding:30px;
-max-width:950px;
-width:100%;
-border:1px solid rgba(255,255,255,0.4);
-box-shadow:0 25px 50px rgba(0,0,0,0.15);
-transition:0.4s ease;
-color:#5a189a;
-position:relative;
-z-index:5;
-text-align:center;
-}
-
-/* ================= PHOTO ================= */
-
-.top-photo{
-width:100%;
-max-width:100%;
-height:auto;
-aspect-ratio:16/9;
-object-fit:cover;
-border-radius:20px;
-margin-bottom:25px;
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
-}
-
-
-/* ================= HEADER ================= */
-
-h1{
-font-size:30px;
-font-weight:800;
-background:linear-gradient(90deg,#ff4da6,#9d4edd,#4cc9f0);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.subtext{
-font-size:14px;
-margin-bottom:20px;
-opacity:0.9;
-}
-
-/* ================= BANNER ================= */
-
-.banner{
-margin-top:25px;
-background:rgba(255,255,255,0.35);
-padding:25px;
-border-radius:22px;
-border:1px solid rgba(255,255,255,0.5);
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-text-align:left;
-}
-
-.banner h2{
-font-size:22px;
-color:#7209b7;
-margin-bottom:10px;
-}
-
-.banner p{
-line-height:1.7;
-font-size:15px;
-}
-
-.cake{
-font-size:95px;
-animation:cakeFloat 3s ease-in-out infinite alternate;
-}
-
-@keyframes cakeFloat{
-from{transform:translateY(0);}
-to{transform:translateY(-15px);}
-}
-
-/* ================= MESSAGE BOX ================= */
-
-.msg-box{
-margin-top:25px;
-background:rgba(255,255,255,0.4);
-padding:20px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.6);
-}
-
-/* ================= WHATSAPP BUTTON ================= */
-
-.whatsapp-btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 20px;
-background:#25D366;
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.whatsapp-btn:hover{
-transform:scale(1.1);
-}
-
-/* ================= FOOTER ================= */
-
-.footer{
-margin-top:30px;
-text-align:center;
-padding:20px;
-background:rgba(255,255,255,0.35);
-border-radius:18px;
-font-weight:600;
-}
-
-canvas{
-position:fixed;
-inset:0;
-pointer-events:none;
-z-index:1;
-}
-
-</style>
+    /* responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 3rem; }
+      .subtitle { font-size: 1.8rem; }
+      .details { font-size: 1.3rem; gap: 1rem; }
+      .wish-card p { font-size: 1rem; }
+      .footer-links { flex-direction: column; gap: 0.2rem; }
+      .footer-copyright { flex-direction: column; gap: 0.2rem; }
+    }
+  </style>
 </head>
-
 <body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="floating-bg" id="floating-bg"></div>
 
-<canvas id="confetti"></canvas>
+  <div class="content">
+    <!-- top photo -->
+    <div class="photo-container">
+      <img class="hero-photo" src="supriya.jpg" alt="Supriya" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'600\' viewBox=\'0 0 800 600\'%3E%3Crect width=\'800\' height=\'600\' fill=\'%23ffd9e8\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' font-size=\'36\' font-family=\'Quicksand\' fill=\'%23b3577c\' text-anchor=\'middle\' dy=\'.3em\'%3ESupriya\'s photo%3C/text%3E%3C/svg%3E';">
+    </div>
 
-<div class="card">
+    <!-- main birthday card -->
+    <div class="birthday-card">
+      <h1>✨ Happiest Birthday, Supriya Didi... ✨</h1>
+      <div class="subtitle"><i class="fas fa-crown"></i> Time To Rule <i class="fas fa-crown"></i></div>
+      <div class="details">
+        <span class="detail-item"><i class="fas fa-calendar-alt"></i> 9 March 2008</span>
+        <span class="detail-item"><i class="fas fa-map-marker-alt"></i> Sonpa, Buxar, Bihar</span>
+      </div>
+      <div class="eighteen-badge"><i class="fas fa-star"></i> 18 <i class="fas fa-star"></i></div>
+      <div class="village-love"><i class="fas fa-heart"></i> Happy 18th Birthday... <i class="fas fa-heart"></i></div>
+    </div>
 
-<!-- PHOTO AT TOP -->
-<div class="hero-container">
-  <img src="Bharti.jpg" alt="Bharti" class="top-photo">
-</div>
+    <!-- 4 WISH SECTIONS (girly, heartfelt) -->
+    <div class="wishes-grid">
+      <!-- wish 1: new beginnings -->
+      <div class="wish-card">
+        <i class="fas fa-seedling"></i>
+        <h3>18 & blooming</h3>
+        <p>Turning eighteen is not just a birthday — it’s the opening of a beautiful new chapter in your life. May this year bring you courage to chase your dreams, strength to overcome every challenge, and happiness that fills your days with laughter. May your life continue to grow with love, kindness, and endless possibilities.</p>
+      </div>
+      <!-- wish 2: village roots -->
+      <div class="wish-card">
+        <i class="fas fa-tree"></i>
+        <h3>Sonpa's star</h3>
+        <p>From the peaceful lanes of Sonpa to wherever your dreams may take you, never forget the roots that shaped you. The warmth of your village, the strength of your family, and the pride of Buxar will always walk beside you. Carry that love in your heart and let the world see the brilliance that grew from your roots</p>
+      </div>
+      <!-- wish 3: dream big -->
+      <div class="wish-card">
+        <i class="fas fa-cloud-moon"></i>
+        <h3>reach for the moon</h3>
+        <p>Life is a wide sky full of stars waiting to be discovered. Never be afraid to dream big, explore new paths, and believe in the power of your own light. The future ahead of you is full of adventures, learning, laughter, and beautiful surprises. Keep believing in yourself, keep reaching higher, and never stop shining.</p>
+      </div>
+      <!-- wish 4: bhaiya's love -->
+      <div class="wish-card">
+        <i class="fas fa-heart"></i>
+        <h3>Cake parcel kar dena..</h3>
+        <p>Exams ki vajah se ham nahi, aa sake..., but cake to aa sakta hai n..., parcel kar denaa... Gift ham parcel kar denge... 😅🤣🤣 </p>
+      </div>
+    </div>
 
-<h1>🎀 Happy 16th Birthday Bharti 🥳</h1>
-<div class="subtext">A special day for a special princess ✨</div>
+    <!-- PROFESSIONAL COMPACT FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-quote">
+          <i class="fas fa-quote-left" style="font-size:1rem;"></i> I don't follow the universe — I reprogram it. <i class="fas fa-quote-right" style="font-size:1rem;"></i>
+        </div>
 
-<div class="banner">
-<div style="flex:1">
+        <div class="footer-links">
+          <span>🔗 <a href="https://Anish-Kushwaha.online" target="_blank">Anish-Kushwaha.online</a></span>
+          <span>📧 <a href="mailto:Anish-Kushwaha@zohomail.in">Anish-Kushwaha@zohomail.in</a></span>
+        </div>
 
-<h2>For Bharti 💖</h2>
+        <hr class="footer-hr">
 
-<p>
-Today you turn 16 — and that’s not just a number.  
-It’s the beginning of new dreams, new confidence, and discovering who you truly are.
+        <div class="footer-copyright">
+          <span>© 2026 Anish Kushwaha • All rights reserved</span>
+          <span class="symbols">⚚ Ⓐ ⚚</span>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-You’re growing stronger, smarter, and more independent every year.  
-Never let anyone dim your light.  
-Stay kind, stay fearless, and always believe that you are capable of amazing things.
+  <script>
+    (function() {
+      // floating icons
+      const container = document.getElementById('floating-bg');
+      const icons = ['fa-heart','fa-star','fa-cake-candles','fa-balloon','fa-gift','fa-crown','fa-ice-cream','fa-cherries','fa-butterfly','fa-sparkles','fa-feather','fa-hand-sparkles','fa-face-smile','fa-flower'];
+      for (let i = 0; i < 35; i++) {
+        const div = document.createElement('div');
+        div.className = 'float-icon';
+        div.innerHTML = `<i class="fas ${icons[Math.floor(Math.random() * icons.length)]}"></i>`;
+        div.style.left = Math.random() * 100 + '%';
+        div.style.top = Math.random() * 100 + '%';
+        div.style.fontSize = (1.2 + Math.random() * 2.5) + 'rem';
+        div.style.animationDuration = (10 + Math.random() * 20) + 's';
+        div.style.animationDelay = (Math.random() * 5) + 's';
+        div.style.opacity = 0.25 + Math.random() * 0.3;
+        container.appendChild(div);
+      }
 
-No matter how big you grow, you’ll always be our little princess.
-Keep shining. Keep learning. Keep smiling. ✨
-</p>
+      // confetti
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      const pastel = ['#f9b8c4','#ffc1cc','#ffd1d9','#fdc9d5','#fbb0c0','#e5b0d0','#d9b8e0','#f8c3f0','#b8d8f0','#ffe4b5','#ffc4d6','#d4a5f0'];
 
-</div>
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }
+      window.addEventListener('resize', resize);
+      resize();
 
-<div class="cake">🎂🎁</div>
-</div>
+      function initConfetti(count = 120) {
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height * 0.8,
+            size: 5 + Math.random() * 14,
+            speedY: 1 + Math.random() * 4,
+            speedX: (Math.random() - 0.5) * 0.8,
+            color: pastel[Math.floor(Math.random() * pastel.length)],
+            rotation: Math.random() * 360,
+            rotationSpeed: (Math.random() - 0.5) * 0.02,
+          });
+        }
+      }
+      initConfetti(140);
 
-<div class="msg-box">
-<h3>💌 A Special Message</h3>
-<p>
-Happy Birthday Bharti 🎉💖  
-May your heart stay pure, your dreams stay bold,  
-and your smile stay forever bright.
-</p>
+      function update() {
+        for (let p of particles) {
+          p.y += p.speedY;
+          p.x += p.speedX;
+          p.rotation += p.rotationSpeed;
+          if (p.y > height + 40) {
+            p.y = -20;
+            p.x = Math.random() * width;
+          }
+          if (p.x < -40) p.x = width + 40;
+          if (p.x > width + 40) p.x = -40;
+        }
+      }
 
-<p>Aab ho gya..., Padhii kar le !!! 😄</p>
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        for (let p of particles) {
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          ctx.globalAlpha = 0.7;
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(0, 0, p.size * 0.5, 0, Math.PI * 2);
+          ctx.fill();
+          if (p.size > 8) {
+            ctx.globalAlpha = 0.3;
+            ctx.fillStyle = '#fff9f0';
+            ctx.beginPath();
+            ctx.arc(-2, -2, 2, 0, 2*Math.PI);
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+      }
 
-<!-- WhatsApp Hyperlink -->
-<a class="whatsapp-btn" href="https://wa.me/918219677010" target="_blank">
-Chat on WhatsApp 💬
-</a>
+      function animate() {
+        update();
+        draw();
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  </script>
 
-</div>
-
-<div class="footer">
-<p>"I don't follow the universe — I reprogram it."</p>
-<p>© 2026 Anish Kushwaha • All rights reserved</p>
-<p>⚚Ⓐ⚚</p>
-</div>
-
-</div>
-
-<script>
-
-/* ===== CONFETTI ===== */
-
-const canvas=document.getElementById("confetti");
-const ctx=canvas.getContext("2d");
-canvas.width=innerWidth;
-canvas.height=innerHeight;
-
-const particles=[];
-const colors=["#ff6ec4","#cdb4db","#ffc8dd","#bde0fe"];
-
-for(let i=0;i<80;i++){
-particles.push({
-x:Math.random()*innerWidth,
-y:Math.random()*innerHeight-innerHeight,
-size:8,
-vy:Math.random()*2+1,
-color:colors[Math.floor(Math.random()*colors.length)]
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-particles.forEach(p=>{
-ctx.fillStyle=p.color;
-ctx.fillRect(p.x,p.y,p.size,p.size);
-p.y+=p.vy;
-if(p.y>canvas.height)p.y=-10;
-});
-requestAnimationFrame(draw);
-}
-draw();
-
-/* ===== FLOATING HEARTS ===== */
-
-setInterval(()=>{
-const heart=document.createElement("div");
-heart.className="heart";
-heart.innerHTML="💖";
-heart.style.left=Math.random()*100+"%";
-heart.style.animationDuration=(5+Math.random()*5)+"s";
-document.body.appendChild(heart);
-setTimeout(()=>heart.remove(),10000);
-},800);
-
-</script>
-
+  <!-- extra sparkle for wish icons -->
+  <style>
+    .wish-card i { filter: drop-shadow(0 0 5px #ff9ec0); }
+    .footer { font-family: 'Quicksand', sans-serif; }
+    .footer-quote { font-size: 1.3rem; }
+    @media (max-width: 500px) {
+      .footer-quote { font-size: 1.1rem; }
+    }
+  </style>
 </body>
 </html>
